@@ -4,21 +4,10 @@
 
 import './styles/theme.css';
 import './styles/global.css';
-import Container from './components/shared/Container';
-import Logo from './components/shared/Logo';
-import Menu from './components/shared/Menu';
-import CountDown from './components/counter/CountDown';
-import Form from './components/counter/Form';
-import Footer from './components/shared/Footer';
+import Counter from './pages/Counter';
 
 export default function App() {
   return (
-    <Container>
-      <Logo />
-      <Menu />
-      <CountDown />
-      <Form />
-      <Footer />
-    </Container>
+    <Counter />
   );
 }
