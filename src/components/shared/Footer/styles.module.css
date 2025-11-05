@@ -1,0 +1,42 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-sizw: 1.4rem;
+  padding: 1.6rem 0;
+  color: var(--text-muted);
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.helpLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all 0.2s ease-in-out;
+}
+
+.helpLink:hover {
+  color: var(--primary);
+}
+
+.developer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.developerLink {
+  color: var(--primary);
+  transition: all 0.2s ease-in-out;
+}
+
+.developerLink:hover {
+  color: var(--primary-dark);
+}

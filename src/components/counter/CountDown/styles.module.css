@@ -1,0 +1,9 @@
+.countDown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(8rem, 25vw, 16rem);
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.3;
+}
