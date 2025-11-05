@@ -13,14 +13,12 @@ import Footer from './components/shared/Footer';
 
 export default function App() {
   return (
-    <div>
-      <Container>
-        <Logo />
-        <Menu />
-        <CountDown />
-        <Form />
-        <Footer />
-      </Container>
-    </div>
+    <Container>
+      <Logo />
+      <Menu />
+      <CountDown />
+      <Form />
+      <Footer />
+    </Container>
   );
 }

@@ -14,14 +14,71 @@
   color: var(--text-over-primary);
   transition: all 0.2s ease-in-out;
   padding: 1.2rem;
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
 }
 
 .menuLink:hover {
   filter: brightness(80%);
 }
 
-.menuLink svg {
+.menu button {
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.themeWrapper {
+  position: relative;
   width: 2.4rem;
   height: 2.4rem;
+}
+
+.icon {
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.sunActive {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.moonActive {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.sunInactive {
+  transform: translateY(100%) rotate(25deg);
+  opacity: 0;
+}
+
+.moonInactive {
+  transform: translateY(-100%) rotate(-25deg);
+  opacity: 0;
+}
+
+.animating .sunActive {
+  transform: translateY(100%) rotate(25deg);
+  opacity: 0;
+}
+
+.animating .sunInactive {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.animating .moonActive {
+  transform: translateY(-100%) rotate(-25deg);
+  opacity: 0;
+}
+
+.animating .moonInactive {
+  transform: translateY(0);
+  opacity: 1;
 }
