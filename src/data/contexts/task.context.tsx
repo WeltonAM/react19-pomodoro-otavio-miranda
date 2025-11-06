@@ -5,7 +5,7 @@ import type { TaskStateModel } from "../../models/TaskStateModel";
 import { initialTaskState } from "../constants/task";
 import { TimerWorkerManager } from "../../workers/TimerWorkerManager";
 import { loadBeep } from "../../utils/loadBeep";
-import { showMessage } from "../../components/adapter/showMessage";
+import { showMessage } from "../../adapter/showMessage";
 
 export const TaskActionTypes = {
     START_TASK: "START_TASK",

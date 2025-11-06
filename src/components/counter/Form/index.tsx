@@ -7,7 +7,7 @@ import { useRef } from "react";
 import type { TaskModel } from "../../../models/TaskModel";
 import { useTask } from "../../../data/hooks/useTask.hook";
 import Tips from "../Tips";
-import { showMessage } from "../../adapter/showMessage";
+import { showMessage } from "../../../adapter/showMessage";
 
 export default function Form() {
     const {

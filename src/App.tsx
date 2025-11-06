@@ -5,15 +5,15 @@
 
 import './styles/theme.css';
 import './styles/global.css';
-import Counter from './pages/Counter';
 import { TaskProvider } from './data/contexts/task.context';
 import { Message } from './components/shared/Message';
+import { MainRouter } from './router/MainRouter';
 
 export default function App() {
   return (
     <TaskProvider>
       <Message>
-        <Counter />
+        <MainRouter />
       </Message>
     </TaskProvider>
   );

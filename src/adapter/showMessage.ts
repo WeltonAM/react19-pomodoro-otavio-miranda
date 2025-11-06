@@ -1,5 +1,5 @@
 import { toast } from 'react-toastify';
-import { Dialog } from '../shared/Dialog';
+import { Dialog } from '../components/shared/Dialog';
 
 export const showMessage = {
   success: (msg: string) => toast.success(msg),

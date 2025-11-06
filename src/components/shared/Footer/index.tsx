@@ -1,15 +1,16 @@
 import styles from "./styles.module.css";
+import { RouterLink } from "../../../adapter/Link";
 
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <a
+            <RouterLink
                 target="_blank"
-                href="https://welton-matos-dev-portfolio.vercel.app/"
+                to="/about-pomodoro"
                 className={styles.helpLink}
             >
                 Curious about how the Pomodoro technique works? 🍓
-            </a>
+            </RouterLink>
 
             <span>
                 Chronos Promodoro &copy; {new Date().getFullYear()}
@@ -17,13 +18,17 @@ export default function Footer() {
 
             <span className={styles.developer}>
                 Made with ❤️ by
-                <a
+                <RouterLink
                     target="_blank"
-                    href="https://welton-matos-dev-portfolio.vercel.app/"
+                    to="https://welton-matos-dev-portfolio.vercel.app/"
                     className={styles.developerLink}
                 >
                     WeltonMatosDev
-                </a>
+                </RouterLink>
+            </span>
+
+            <span>
+                -tulip🌷
             </span>
         </footer>
     );
