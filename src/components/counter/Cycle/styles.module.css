@@ -21,10 +21,10 @@
   background: var(--warning);
 }
 
-.shortBreak {
+.shortBreakTime {
   background: var(--primary);
 }
 
-.longBreak {
+.longBreakTime {
   background: var(--info);
 }

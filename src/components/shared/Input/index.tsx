@@ -6,7 +6,7 @@ export type InputProps = {
     id: string;
     label?: string;
     placeholder?: string;
-} & React.ComponentPropsWithoutRef<'input'>;
+} & React.ComponentPropsWithRef<'input'>;
 
 export default function Input({ label, id, type, placeholder, ...props }: InputProps) {
     return (
