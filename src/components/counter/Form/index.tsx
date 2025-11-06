@@ -17,7 +17,7 @@ export default function Form() {
             </div>
 
             <div className={styles.formRow}>
-                <p>LOREM</p>
+                <p>The next brake time</p>
             </div>
 
             <div className={styles.formRow}>

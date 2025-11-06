@@ -5,9 +5,12 @@
 import './styles/theme.css';
 import './styles/global.css';
 import Counter from './pages/Counter';
+import { TaskProvider } from './data/contexts/task.context';
 
 export default function App() {
   return (
-    <Counter />
+    <TaskProvider>
+      <Counter />
+    </TaskProvider>
   );
 }

@@ -1,3 +1,4 @@
+import styles from "./styles.module.css";
 import Container from "../../shared/Container";
 import Footer from "../../shared/Footer";
 import Logo from "../../shared/Logo";
@@ -12,7 +13,7 @@ export default function Page({ children }: PageProps) {
     <Container>
       <Logo />
       <Menu />
-      <main>
+      <main className={styles.main}>
         {children}
       </main>
       <Footer />
