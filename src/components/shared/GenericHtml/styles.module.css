@@ -49,7 +49,8 @@
   .genericHtml {
     padding: 1.6rem;
   }
-  .genericHtml h1 {
+  .genericHtml h1,
+  h2 {
     text-align: center;
   }
   .genericHtml p > em {

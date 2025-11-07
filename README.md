@@ -22,11 +22,15 @@
 
 ## 🚀 About the Project
 
-This repository is part of the **updated React + Next.js 2025 course** by **Luíz Otávio Miranda**.  
-It focuses on building a complete **Pomodoro Timer**, applying modern **React 19 concepts**, component architecture, and software engineering best practices.
+This repository is part of the **updated React + Next.js 2025 course** by **Luíz
+Otávio Miranda**.  
+It focuses on building a complete **Pomodoro Timer**, applying modern **React 19
+concepts**, component architecture, and software engineering best practices.
 
-The app uses **Vite** for fast development, **TypeScript** for static typing, and **React Router** for navigation.  
-It also uses **Web Workers** to handle time counting in the background without blocking the UI.
+The app uses **Vite** for fast development, **TypeScript** for static typing,
+and **React Router** for navigation.  
+It also uses **Web Workers** to handle time counting in the background without
+blocking the UI.
 
 ---
 
@@ -38,7 +42,7 @@ It also uses **Web Workers** to handle time counting in the background without b
 | **Language**           | TypeScript                   |
 | **Framework**          | React 19                     |
 | **Routing**            | React Router                 |
-| **State Management**   | Context API                  |
+| **State Management**   | Context API with Reducer     |
 | **Persistence**        | LocalStorage                 |
 | **Styling**            | CSS Modules                  |
 | **Parallel Execution** | Web Worker                   |
@@ -101,18 +105,24 @@ npm run build
 
 ## 🧑‍🏫 About the Instructor
 
-**Luíz Otávio Miranda** is a well-known software developer and instructor specializing in **JavaScript**, **React**, and **Next.js**, recognized for his practical, hands-on teaching style.
+**Luíz Otávio Miranda** is a well-known software developer and instructor
+specializing in **JavaScript**, **React**, and **Next.js**, recognized for his
+practical, hands-on teaching style.
 
 - 🔗 [LinkedIn](https://www.linkedin.com/in/otaviomirandabr/)
-- 🎓 [React & Next.js 2025 Course](https://www.udemy.com/course/curso-de-reactjs-nextjs-completo-do-basico-ao-avancado/)
+- 🎓
+  [React & Next.js 2025 Course](https://www.udemy.com/course/curso-de-reactjs-nextjs-completo-do-basico-ao-avancado/)
 
 ---
 
 ## 🧠 Personal Notes
 
-This project marks the start of my journey through the **React & Next.js 2025 course**, reinforcing core concepts of frontend architecture, state management, and modern web development.
+This project marks the start of my journey through the **React & Next.js 2025
+course**, reinforcing core concepts of frontend architecture, state management,
+and modern web development.
 
-> “Mastering React is not about memorizing hooks — it’s about understanding **architecture, state, and component responsibility**.”
+> “Mastering React is not about memorizing hooks — it’s about understanding
+> **architecture, state, and component responsibility**.”
 
 ---
 
@@ -126,9 +136,24 @@ This project marks the start of my journey through the **React & Next.js 2025 co
 
 ---
 
+## 🎥 Showcase
+
+You can check out the app in action
+[**Chronos Pomodoro**](https://github.com/luizovia/react-pomodoro-app/tree/main/showcase)
+
+---
+
+## 📜 Certificate
+
+Take a look at the 🚧 **in progress**🚧 🛠️[**Certification**]()
+
+---
+
 ## 🪪 License
 
-This repository is intended for **educational and personal learning purposes**.  
-Feel free to explore and adapt it — please provide proper attribution if you share or reuse the code.
+This repository is intended for **educational and personal learning
+purposes**.  
+Feel free to explore and adapt it — please provide proper attribution if you
+share or reuse the code.
 
 ---

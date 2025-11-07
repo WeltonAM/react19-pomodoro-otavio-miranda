@@ -196,7 +196,7 @@ export function TaskProvider({ children }: { children: React.ReactNode }) {
 
     const createTask = (taskData: TaskModel) => {
         dispatch({ type: TaskActionTypes.START_TASK, payload: taskData });
-        showMessage.success('Task created');
+        if (task.tasks.length === 0) showMessage.info('Task created');
     }
 
     const interruptTask = () => {

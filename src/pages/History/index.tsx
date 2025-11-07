@@ -82,7 +82,7 @@ export function History() {
           <span className={styles.buttonContainer}>
             <Button
               icon={<TrashIcon />}
-              color='error'
+              styleColor='error'
               aria-label='Clear history'
               title='Clear history'
               onClick={handleResetHistory}
