@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Routes, useLocation } from 'react-router';
 import Counter from '../pages/Counter';
 import { AboutPomodoro } from '../components/shared/About';
 import NotFound from '../pages/NotFound';
-import History from '../pages/History';
 import Settings from '../pages/Settings';
+import { History } from '../pages/History';
 
 function ScrollToTop() {
   const { pathname } = useLocation();

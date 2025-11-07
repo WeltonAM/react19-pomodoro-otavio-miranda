@@ -19,6 +19,7 @@ export default function Form() {
     } = useTask();
 
     const taskNameRef = useRef<HTMLInputElement>(null);
+    const lastTaskName = task.tasks[task.tasks.length - 1]?.name || '';
 
     const handleCreateNewTask = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -60,6 +61,7 @@ export default function Form() {
                     placeholder="Type your task"
                     ref={taskNameRef}
                     disabled={!!task.activeTask}
+                    defaultValue={lastTaskName}
                 />
             </div>
 

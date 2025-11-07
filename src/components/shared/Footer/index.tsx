@@ -27,8 +27,8 @@ export default function Footer() {
                 </RouterLink>
             </span>
 
-            <span>
-                -tulip🌷
+            <span className={styles.sdg}>
+                Soli Deo Gloria
             </span>
         </footer>
     );

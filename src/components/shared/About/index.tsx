@@ -2,7 +2,7 @@ import { RouterLink } from "../../../adapter/Link";
 import Page from "../../template/Page";
 import Container from "../Container";
 import { GenericHtml } from "../GenericHtml";
-import Heading from "../Heading";
+import { Heading } from "../Heading";
 
 export function AboutPomodoro() {
     return (

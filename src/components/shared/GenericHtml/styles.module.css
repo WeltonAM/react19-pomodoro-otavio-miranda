@@ -44,3 +44,15 @@
   display: block;
   margin: 1.6rem 0;
 }
+
+@media (max-width: 768px) {
+  .genericHtml {
+    padding: 1.6rem;
+  }
+  .genericHtml h1 {
+    text-align: center;
+  }
+  .genericHtml p > em {
+    text-align: center;
+  }
+}

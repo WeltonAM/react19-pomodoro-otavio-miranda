@@ -1,7 +1,7 @@
 import { GenericHtml } from "../../components/shared/GenericHtml";
-import Heading from "../../components/shared/Heading";
 import Page from "../../components/template/Page";
 import { RouterLink } from "../../adapter/Link";
+import { Heading } from "../../components/shared/Heading";
 
 export default function NotFound() {
   return (

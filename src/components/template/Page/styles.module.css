@@ -5,3 +5,9 @@
   justify-content: center;
   flex: 1;
 }
+
+@media (max-width: 768px) {
+  .main {
+    width: 100%;
+  }
+}

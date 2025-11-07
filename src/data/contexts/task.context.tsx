@@ -7,6 +7,12 @@ import { TimerWorkerManager } from "../../workers/TimerWorkerManager";
 import { loadBeep } from "../../utils/loadBeep";
 import { showMessage } from "../../adapter/showMessage";
 
+export type SortTasksOptions = {
+    tasks: TaskModel[];
+    direction?: 'asc' | 'desc';
+    field?: keyof TaskModel;
+};
+
 export const TaskActionTypes = {
     START_TASK: "START_TASK",
     COMPLETE_TASK: "COMPLETE_TASK",
@@ -111,6 +117,8 @@ interface TaskContextProps {
     changeSettings: (settings: TaskSettings) => void;
     getNextCycle: (currentCycle: number) => number;
     getNextCycleType: (currentCycle: number) => TaskModel["type"];
+    getTaskStatus: (task: TaskModel, activeTask: TaskModel | null) => string;
+    sortTasks: (options: SortTasksOptions) => TaskModel[];
 }
 
 const TaskContext = createContext<TaskContextProps | undefined>(undefined);
@@ -154,25 +162,37 @@ export function TaskProvider({ children }: { children: React.ReactNode }) {
         }
     });
 
-    useEffect(() => {
-        localStorage.setItem('state', JSON.stringify(task));
+    const sortTasks = ({
+        field = 'startDate',
+        direction = 'desc',
+        tasks = [],
+    }: SortTasksOptions): TaskModel[] => {
+        return [...tasks].sort((a, b) => {
+            const aValue = a[field];
+            const bValue = b[field];
 
-        if (!task.activeTask) {
-            worker.terminate();
-        }
+            if (aValue === null && bValue === null) return 0;
+            if (aValue === null) return 1;
+            if (bValue === null) return -1;
+            if (typeof aValue === 'number' && typeof bValue === 'number') {
+                return direction === 'asc' ? aValue - bValue : bValue - aValue;
+            }
+            if (typeof aValue === 'string' && typeof bValue === 'string') {
+                return direction === 'asc'
+                    ? aValue.localeCompare(bValue)
+                    : bValue.localeCompare(aValue);
+            }
 
-        document.title = `${task.formattedSecondsRemaining} - Chronos Pomodoro`;
+            return 0;
+        });
+    }
 
-        worker.postMessage(task);
-    }, [worker, task]);
-
-    useEffect(() => {
-        if (task.activeTask && playBeepRef.current === null) {
-            playBeepRef.current = loadBeep();
-        } else {
-            playBeepRef.current = null;
-        }
-    }, [task.activeTask]);
+    const getTaskStatus = (task: TaskModel, activeTask: TaskModel | null) => {
+        if (task.completeDate) return 'Completed';
+        if (task.interruptedDate) return 'Interrupted';
+        if (task.id === activeTask?.id) return 'Active';
+        return 'Inactive';
+    }
 
     const createTask = (taskData: TaskModel) => {
         dispatch({ type: TaskActionTypes.START_TASK, payload: taskData });
@@ -203,6 +223,26 @@ export function TaskProvider({ children }: { children: React.ReactNode }) {
         dispatch({ type: TaskActionTypes.CHANGE_SETTINGS, payload: settings });
     }
 
+    useEffect(() => {
+        localStorage.setItem('state', JSON.stringify(task));
+
+        if (!task.activeTask) {
+            worker.terminate();
+        }
+
+        document.title = `${task.formattedSecondsRemaining} - Chronos Pomodoro`;
+
+        worker.postMessage(task);
+    }, [worker, task]);
+
+    useEffect(() => {
+        if (task.activeTask && playBeepRef.current === null) {
+            playBeepRef.current = loadBeep();
+        } else {
+            playBeepRef.current = null;
+        }
+    }, [task.activeTask]);
+
     return (
         <TaskContext.Provider
             value={{
@@ -214,6 +254,8 @@ export function TaskProvider({ children }: { children: React.ReactNode }) {
                 changeSettings,
                 getNextCycle,
                 getNextCycleType,
+                getTaskStatus,
+                sortTasks,
             }}
         >
             {children}
