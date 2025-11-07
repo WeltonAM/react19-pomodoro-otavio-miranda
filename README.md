@@ -139,7 +139,7 @@ and modern web development.
 ## 🎥 Showcase
 
 You can check out the app in action
-[**Chronos Pomodoro**](https://github.com/luizovia/react-pomodoro-app/tree/main/showcase)
+[**Chronos Pomodoro**](https://chronos-pomodoro-flame.vercel.app/counter)
 
 ---
 
